@@ -5,6 +5,7 @@ __pycache__/
 *.pyd
 
 # 가상환경
+pyvenv.cfg
 venv/
 env/
 Lib/
