@@ -17,6 +17,7 @@ CRAWLING STUDY
 
 
 ## 설치 및 실행 방법
+scripts/develop.sh 을 실행시켜 개발환경 활성화
 
 ### 설치
 ```bash

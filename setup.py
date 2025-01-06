@@ -1,43 +1,40 @@
-import subprocess
-from pathlib import Path
-import shutil
+import sys
 import os
+from cx_Freeze import setup, Executable
 
-def build_exe():
-    separator = ";" if os.name == 'nt' else ":"
-    
-    pyinstaller_cmd = [
-        "pyinstaller",
-        "--onefile",
-        "--name", "main",
-        "--add-data", f"assets{separator}assets",
-        "main.py"
-    ]
-    
-    result = subprocess.run(pyinstaller_cmd, capture_output=True, text=True)
-    
-    if result.returncode == 0:
-        print("PyInstaller 빌드 성공")
-        copy_to_release()
-    else:
-        print("PyInstaller 빌드 실패")
-        print(result.stderr)
+# ADD FILES
+files = ['icon.ico','themes/']
 
-def copy_to_release():
-    dist_exe = Path("dist/main.exe")
-    release_dir = Path("../release")
-    release_assets = release_dir / "assets"
-    src_assets = Path("assets")
+# VERSION
+version = "1.0"
+build_folder = f"release/{version}"
 
-    release_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copy(dist_exe, release_dir / "main.exe")
-    
-    if src_assets.exists():
-        if release_assets.exists():
-            shutil.rmtree(release_assets)
-        shutil.copytree(src_assets, release_assets)
-    
-    print("실행 파일 및 assets 폴더가 release 폴더에 복사되었습니다.")
+# EXCLUDES
+excludes = ['tkinter']
 
-if __name__ == "__main__":
-    build_exe()
+# INCLUDE PACKAGES - 다른 환경에서 실행시키려면 필요함
+packages = ['PySide6.QtCore', 'PySide6.QtGui', 'PySide6.QtWidgets']
+
+# TARGET
+target = Executable(
+    script="main.py",
+    base="Win32GUI",
+    icon="icon.ico",
+    target_name="PyDracula.exe",
+)
+
+# SETUP CX FREEZE
+setup(
+    name = "PyDracula",
+    version = "1.0",
+    description = "Modern GUI for Python applications",
+    author = "Wanderson M. Pimenta",
+    options = {'build_exe' : {'include_files' : files,
+                              'build_exe': build_folder,
+                              'excludes': excludes,
+                              'packages': packages,
+                              'optimize': 2,
+                              }
+                },
+    executables = [target]
+)
