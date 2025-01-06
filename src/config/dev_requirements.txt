@@ -1,4 +1,3 @@
-pyinstaller
+cx_Freeze
 requests
-
 selenium

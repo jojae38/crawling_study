@@ -1,0 +1,20 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# 가상환경
+venv/
+env/
+Lib/
+bin/
+Scripts/
+
+# IDE 설정
+.vscode/
+.idea/
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db
