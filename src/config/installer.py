@@ -1,7 +1,9 @@
 import subprocess
 import sys
 import importlib.metadata
-
+import os
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+print(PROJECT_ROOT)
 def install_requirements():
     """
     requirements.txt 내부 라이브러리 설치
