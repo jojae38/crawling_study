@@ -1,6 +1,8 @@
 import logging
 import sys
 from pathlib import Path
+
+from setup_env import PROJECT_ROOT
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 from src.config.path_manager import LOG_DIR
 
@@ -11,7 +13,7 @@ LOG_DIR.mkdir(exist_ok=True)  # logs 디렉터리가 없으면 생성
 
 # 로그 설정
 logging.basicConfig(
-    filename=LOG_DIR / 'app.log',  # 로그 파일 위치
+    filename= PROJECT_ROOT / 'app.log',  # 로그 파일 위치
     level=logging.ERROR,           # ERROR 레벨 이상만 기록
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
