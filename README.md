@@ -20,22 +20,22 @@ CRAWLING STUDY
 git clone https://github.com/jojae38/crawling_study.git
 cd crawling_study
 python -m venv .venv
-source .venv/bin/activate
+.venv\Scripts\activate
 pip install -e .
 
 ## EXE 파일 생성 방법
 python setup_exe.py build
 
-scripts/develop.sh 을 실행시켜 개발환경 활성화
+## 아이콘 생성 방법
 
-## EXE 파일 생성 방법
+
 
 ### 설치
 ```bash
 git clone https://github.com/jojae38/crawling_study.git
 cd crawling_study
-python -m venv venv
-source venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 

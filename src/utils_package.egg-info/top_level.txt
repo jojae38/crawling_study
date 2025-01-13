@@ -1,6 +1,6 @@
+assets
 config
 core
 modules
-setup_env
 tests
 utils

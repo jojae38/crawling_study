@@ -1,6 +1,7 @@
 License
 README.md
 setup.py
+src/assets/__init__.py
 src/config/__init__.py
 src/core/__init__.py
 src/core/app.py
@@ -14,12 +15,11 @@ src/modules/updater.py
 src/tests/__init__.py
 src/tests/test.py
 src/utils/__init__.py
+src/utils/directories.py
 src/utils/error.py
 src/utils/installer.py
 src/utils/logger.py
-src/utils/path_manager.py
-src/utils/paths.py
-src/utils/utils.py
+src/utils/toolbox.py
 src/utils_package.egg-info/PKG-INFO
 src/utils_package.egg-info/SOURCES.txt
 src/utils_package.egg-info/dependency_links.txt
