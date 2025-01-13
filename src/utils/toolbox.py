@@ -15,3 +15,10 @@ def create_folder(folder_path):
         print(f"폴더 생성 완료: {folder_path}")
     else:
         print(f"폴더 이미 존재: {folder_path}")
+
+def read_json(json_path) -> dict:
+    import json
+    ret = {}
+    with open(json_path) as f:
+        ret = json.load(f)
+    return ret

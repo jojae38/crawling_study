@@ -24,6 +24,7 @@ source .venv/bin/activate
 pip install -e .
 
 ## EXE 파일 생성 방법
+python setup_exe.py build
 
 scripts/develop.sh 을 실행시켜 개발환경 활성화
 

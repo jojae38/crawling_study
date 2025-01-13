@@ -1,5 +1,5 @@
 from pathlib import Path
-from utils.toolbox import create_folder
+from utils.toolbox import create_folder, read_json
 import sys
 
 if getattr(sys, "frozen", False):  # cx_Freeze로 실행된 경우
@@ -14,9 +14,9 @@ else:  # 개발 환경에서 실행된 경우
 import json
 
 # JSON 파일에서 경로 읽기
-with open(PROJECT_ROOT / 'config' /'path.json') as f:
-    DIRS_CONFIG = json.load(f)
-
+# with open(PROJECT_ROOT / 'config' /'path.json') as f:
+#     DIRS_CONFIG = json.load(f)
+DIRS_CONFIG = read_json(PROJECT_ROOT / 'config' /'path.json')
 
 # DIRS_DICT = {
 #     'ASSETS_DIR': PROJECT_ROOT / 'assets',

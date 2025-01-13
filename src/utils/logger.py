@@ -43,8 +43,8 @@ def log_info(message):
 def log_warning(message):
     logger.warning(message)
 
-log_error("이 로그는 에러 메시지로 기록됩니다.")
-log_info("이 로그는 정보 메시지로 기록됩니다.") 
-log_warning("이 로그는 경고 메시지로 기록됩니다.")
+# log_error("이 로그는 에러 메시지로 기록됩니다.")
+# log_info("이 로그는 정보 메시지로 기록됩니다.") 
+# log_warning("이 로그는 경고 메시지로 기록됩니다.")
 
-print("로그 파일을 열어보세요.")
+# print("로그 파일을 열어보세요.")
