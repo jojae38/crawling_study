@@ -17,6 +17,14 @@ CRAWLING STUDY
 
 
 ## 설치 및 실행 방법
+git clone https://github.com/jojae38/crawling_study.git
+cd crawling_study
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+
+## EXE 파일 생성 방법
+
 scripts/develop.sh 을 실행시켜 개발환경 활성화
 
 ## EXE 파일 생성 방법

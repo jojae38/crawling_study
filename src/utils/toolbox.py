@@ -12,6 +12,6 @@ def create_folder(folder_path):
     # 폴더가 없으면 생성
     if not folder_path.exists():
         folder_path.mkdir(parents=True)  # 부모 디렉토리까지 포함해서 생성
-        print(f"Created folder: {folder_path}")
+        print(f"폴더 생성 완료: {folder_path}")
     else:
-        print(f"Folder already exists: {folder_path}")
+        print(f"폴더 이미 존재: {folder_path}")
