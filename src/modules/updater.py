@@ -1,3 +1,5 @@
+# 업데이트 기능
+
 import requests
 import zipfile
 import shutil

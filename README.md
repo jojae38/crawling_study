@@ -1,5 +1,4 @@
 # 프로젝트 이름
-
 CRAWLING STUDY
 
 ## 소개
@@ -28,26 +27,7 @@ python setup_exe.py build
 
 ## 아이콘 생성 방법
 
-
-
-### 설치
-```bash
-git clone https://github.com/jojae38/crawling_study.git
-cd crawling_study
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 실행
-```bash
-cd crawling_study
-python main.py
-```
-
 ### 설치 및 실행 하기 위한 스크린샷
-
 
 ## 사용법
 
-pip install -r requirements.txt

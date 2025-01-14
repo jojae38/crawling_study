@@ -2,3 +2,4 @@ cx_Freeze
 requests
 selenium
 setuptools
+pyserial

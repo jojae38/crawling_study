@@ -8,6 +8,7 @@ License-File: License
 Requires-Dist: cx_Freeze
 Requires-Dist: requests
 Requires-Dist: selenium
+Requires-Dist: setuptools
 Dynamic: author
 Dynamic: home-page
 Dynamic: requires-dist

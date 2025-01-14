@@ -11,7 +11,7 @@ else:  # 개발 환경에서 실행된 경우
     print(f"개발 환경: {PROJECT_ROOT}")
     print(f"Python 인터프리터 경로: {sys.executable}")
 
-import json
+# import json
 
 # JSON 파일에서 경로 읽기
 # with open(PROJECT_ROOT / 'config' /'path.json') as f:
