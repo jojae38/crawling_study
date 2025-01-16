@@ -11,6 +11,30 @@ class BaudRate:
     BAUD_460800 = 460800
     BAUD_921600 = 921600
 
+class SERIAL_MODULE:
+    def __init__(self):
+        self.available_ports_name = []
+        self.serial_ports = []
+        self.list_serial_ports()
+        pass
+
+    def print_serial_ports(self, port):
+        print("-" * 40)
+        print(f"포트 이름: {port.device}")
+        print(f"설명: {port.description}")
+        print(f"하드웨어 ID: {port.hwid}")
+        print("-" * 40)
+
+    def list_serial_ports(self):
+        ports = serial.tools.list_ports.comports()
+        for port in ports:
+            self.available_ports_name.append(port.name)
+
+
+    def connect(self, port_name, baud_rate=9600, timeout=1):
+        pass
+    
+
 class Serial_Comm:
     def __init__(self):
         pass
@@ -38,6 +62,11 @@ def connect_to_port(port_name, baud_rate=9600, timeout=1):
     try:
         ser = serial.Serial(port=port_name, baudrate=baud_rate, timeout=timeout)
         print(f"{port_name} 포트에 성공적으로 연결되었습니다.")
+        print(f"시리얼 포트 이름: {ser.name}")
+        print(f"시리얼 포트 하드웨어 ID: {ser.port}")
+        print(f"시리얼 포트 버스 유형: {ser.baudrate}")
+        print(f"시리얼 포트 시간초과: {ser.timeout}")
+        print(f"시리얼 포트 디버깅: {ser.port}")
         return ser
     except serial.SerialException as e:
         print(f"{port_name} 포트에 연결 실패: {e}")
@@ -61,7 +90,7 @@ def serial_read(ser, size=1):
         print(f"시리얼 포트에서 데이터 읽기 실패: {e}") 
 
 list_serial_ports()
-ser = connect_to_port("COM5",BaudRate.BAUD_230400,1)
+ser = connect_to_port("COM6",BaudRate.BAUD_230400,1)
 serial_write(ser,"test")
 data = serial_read(ser,5)
 print(data)

@@ -22,3 +22,8 @@ def read_json(json_path) -> dict:
     with open(json_path) as f:
         ret = json.load(f)
     return ret
+
+def write_json(json_path, data):
+    import json
+    with open(json_path, 'w') as f:
+        json.dump(data, f, indent=4)
