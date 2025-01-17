@@ -1,6 +1,6 @@
 from pathlib import Path
 import datetime
-from logger import *
+from utils.logger import *
 
 class ErrorCode:
     UNKNOWN_ERROR = 'E0000'
