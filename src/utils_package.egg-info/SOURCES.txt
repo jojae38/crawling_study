@@ -8,8 +8,10 @@ src/core/app.py
 src/modules/__init__.py
 src/modules/ads.py
 src/modules/auth.py
+src/modules/gpt.py
 src/modules/login.py
-src/modules/serial.py
+src/modules/payment.py
+src/modules/serial_comm.py
 src/modules/settings.py
 src/modules/updater.py
 src/tests/__init__.py

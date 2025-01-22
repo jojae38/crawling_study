@@ -9,6 +9,8 @@ Requires-Dist: cx_Freeze
 Requires-Dist: requests
 Requires-Dist: selenium
 Requires-Dist: setuptools
+Requires-Dist: pyserial
+Requires-Dist: pyside6
 Dynamic: author
 Dynamic: home-page
 Dynamic: requires-dist
