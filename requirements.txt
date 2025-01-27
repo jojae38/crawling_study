@@ -4,3 +4,4 @@ selenium
 setuptools
 pyserial
 pyside6
+pyautogui
