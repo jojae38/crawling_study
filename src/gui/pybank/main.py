@@ -4,7 +4,7 @@ import os
 
 from PySide6.QtGui import QGuiApplication, QIcon
 from PySide6.QtQml import QQmlApplicationEngine
-from mainWindow import MainWindow
+from gui.pybank.mainWindow import MainWindow
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
